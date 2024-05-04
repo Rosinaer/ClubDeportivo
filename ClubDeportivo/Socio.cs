@@ -24,6 +24,7 @@ namespace ClubDeportivo
             Contacto = contacto;
             Tipo = tipo;
             FechaAfiliacion = DateTime.Today; // Genera la fecha actual al momento de crear el socio
+           
         }
     }
 }

@@ -10,7 +10,7 @@ namespace ClubDeportivo
 
             
            
-                // Crear una instancia de ClubDeportivo
+                // Crear una instancia de GestionClubDeportivo
                 GestionClubDeportivo miClub = new GestionClubDeportivo();
 
                 // Crear una instancia de DateTime para la fecha de afiliación
@@ -24,7 +24,9 @@ namespace ClubDeportivo
                 Profesor nuevoProfesor = new Profesor("María García", "19hs");
                 miClub.Profesores.Add(nuevoProfesor);
 
-                
+                // Crear una instancia de Actividad
+                Actividad actividad = new Actividad("Natación", 1500);
+                miClub.Actividades.Add(actividad);
 
         }
     }

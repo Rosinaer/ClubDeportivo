@@ -10,5 +10,12 @@ namespace ClubDeportivo
         public DateTime FechaPago { get; set; }
         public float Monto { get; set; }
         public string Estado { get; set; }
+
+        public Cuota(DateTime fechaPago, float monto, string estado)
+        {
+            FechaPago = fechaPago;
+            Monto = monto;
+            Estado = estado;
+        }
     }
 }
