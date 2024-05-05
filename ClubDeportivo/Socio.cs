@@ -14,20 +14,18 @@ namespace ClubDeportivo
         public int DNI { get; set; }
         public string Direccion { get; set; }
         public string Contacto { get; set; }
-        public string Tipo { get; set; }// Tipo de miembro (socio o no socio)
         public DateTime FechaAfiliacion { get; set; }
         internal List<Actividad> Actividades { get; set; } = new List<Actividad>(); // Lista de actividades en las que está inscrito el socio
 
-        public Socio(string nombre, string direccion, string contacto, string tipo, DateTime FechaAfiliacion)
+        public Socio(string nombre, string apellido, string direccion, int dni, string contacto)
         {
             IdSocio = ++_contadorId;
             Nombre = nombre;
+            Apellido = apellido;
             Direccion = direccion;
-            Apellido = Apellido;
-            DNI = DNI;
+            DNI = dni;
             Contacto = contacto;
-            Tipo = tipo;
-            this.FechaAfiliacion = FechaAfiliacion;
+            FechaAfiliacion = DateTime.Today;
         }
     }
 }

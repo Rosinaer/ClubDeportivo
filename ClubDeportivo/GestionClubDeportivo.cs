@@ -21,7 +21,7 @@ namespace ClubDeportivo
             Actividades = new List<Actividad>();
         }
         // Método para registrar a un socio si no está previamente registrado
-        public void altaSocio(string nombre, string direccion, string contacto, string tipo, DateTime FechaAfiliacion)
+        public void altaSocio(string nombre, string apellido, string direccion, int dni, string contacto)
         {
             // Verificar si el socio ya está registrado
             bool socioExistente = Socios.Any(s => s.Nombre == nombre && s.Direccion == direccion && s.Contacto == contacto);
@@ -29,7 +29,7 @@ namespace ClubDeportivo
             if (!socioExistente)
             {
                 // Crear una nueva instancia de Socio
-                Socio nuevoSocio = new Socio(nombre, direccion, contacto, tipo, FechaAfiliacion);
+                Socio nuevoSocio = new Socio(nombre, apellido, direccion, dni, contacto);
 
                 // Agregar el nuevo socio a la lista
                 Socios.Add(nuevoSocio);
@@ -64,7 +64,7 @@ namespace ClubDeportivo
             // Verificar si el socio ya está inscrito en la actividad
             if (socio.Actividades.Any(a => a.Nombre == nombreActividad))
             {
-                return "INSCRIPCIÓN EXITOSA";
+                return "YA SE ENCUENTRA INSCRIPTO EN ESTA ACTIVIDAD";
             }
 
             // Inscribir al socio en la actividad y reservar un cupo
@@ -73,7 +73,7 @@ namespace ClubDeportivo
 
             return "INSCRIPCIÓN EXITOSA";
         }
-        // metodo para registrr pago de cuota
+        // metodo para registar pago de cuota
         public void CobrarCuotaMensual(Socio socio, float monto, DateTime fechaPago)
         {
             Cuota cuotaPagada = new Cuota(fechaPago, monto, "Pagado");

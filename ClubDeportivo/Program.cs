@@ -6,7 +6,6 @@ namespace ClubDeportivo
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
 
             
            
@@ -17,7 +16,7 @@ namespace ClubDeportivo
                 DateTime FechaAfiliacion = DateTime.Today;
 
                 // Agregar un socio
-                miClub.altaSocio("Juan Pérez", "Belgica 1460", "juanperez@gmail.com", "socio", FechaAfiliacion);
+                miClub.altaSocio("Juan", "Pérez", "Belgica 1460", 26333247, "juanperez@gmail.com");
 
                 // Agregar un profesor
                 Profesor nuevoProfesor = new Profesor("María García", "19hs");
