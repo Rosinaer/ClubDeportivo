@@ -17,8 +17,7 @@ namespace ClubDeportivo
                 DateTime FechaAfiliacion = DateTime.Today;
 
                 // Agregar un socio
-                Socio nuevoSocio = new Socio("Juan Pérez", "belgica 1460",  "juanperez@gmail.com", "socio", FechaAfiliacion);
-                miClub.Socios.Add(nuevoSocio);
+                miClub.altaSocio("Juan Pérez", "Belgica 1460", "juanperez@gmail.com", "socio", FechaAfiliacion);
 
                 // Agregar un profesor
                 Profesor nuevoProfesor = new Profesor("María García", "19hs");
