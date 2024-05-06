@@ -18,7 +18,7 @@ namespace ClubDeportivo
             IdActividad = ++_contadorId;
             Nombre = nombre;
             Costo = costo;
-            Cupo = 0;// Inicializamos el cupo en 0
+            Cupo = 3;
         }
     }
 }
